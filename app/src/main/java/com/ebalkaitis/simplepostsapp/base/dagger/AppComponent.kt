@@ -13,7 +13,7 @@ import javax.inject.Singleton
     ]
 )
 
-interface AppComponent {
+interface AppComponent : AndroidInjector<SimplePostsApplication> {
     @Component.Builder
     abstract class Builder : AndroidInjector.Builder<SimplePostsApplication>()
 }
