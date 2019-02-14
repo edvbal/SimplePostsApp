@@ -17,7 +17,7 @@ import io.reactivex.Scheduler
 @Module
 abstract class PostsModule {
     @Binds
-    abstract fun bindArticleClickListener(fragment: PostsFragment): PostClickListener
+    abstract fun bindPostClickListener(fragment: PostsFragment): PostClickListener
 
     @Module
     companion object {

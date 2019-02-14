@@ -40,7 +40,7 @@ class PostsFragment : BaseDaggerFragment(), PostsContract.View, PostClickListene
 
 
     override fun populatePosts(posts: List<Post>) {
-        // empty
+        adapter.setAll(posts)
     }
 
     override fun onDestroyView() {
