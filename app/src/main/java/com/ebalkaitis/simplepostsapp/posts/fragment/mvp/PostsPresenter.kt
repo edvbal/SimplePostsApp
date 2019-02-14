@@ -13,7 +13,15 @@ class PostsPresenter(
     override fun onCreated() {
         onView { setRecyclerView() }
         launchJob {
-            model.fetchPosts()
+            model.fetchComments()
+                .flatMap { comments ->
+                    model.saveComments(comments)
+                    model.fetchUsers()
+                }
+                .flatMap { users ->
+                    model.saveUsers(users)
+                    model.fetchPosts()
+                }
                 .observeOn(scheduler)
                 .subscribe({ posts ->
                     onView { populatePosts(posts) }
