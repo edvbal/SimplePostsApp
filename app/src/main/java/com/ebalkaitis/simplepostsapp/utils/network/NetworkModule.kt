@@ -1,7 +1,8 @@
 package com.ebalkaitis.simplepostsapp.utils.network
 
 import com.ebalkaitis.simplepostsapp.BuildConfig
-import com.ebalkaitis.simplepostsapp.utils.scopes.Io
+import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
+import com.ebalkaitis.simplepostsapp.utils.schedulers.Io
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
@@ -36,5 +37,9 @@ abstract class NetworkModule {
                 .addInterceptor(HttpLoggingInterceptor().setLevel(BODY))
                 .build()
         }
+
+        @JvmStatic
+        @Provides
+        fun providePostsService(retrofit: Retrofit): PostsService = retrofit.create(PostsService::class.java)
     }
 }
