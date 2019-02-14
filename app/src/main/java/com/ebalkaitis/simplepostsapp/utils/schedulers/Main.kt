@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.utils.scopes
+package com.ebalkaitis.simplepostsapp.utils.schedulers
 
 import javax.inject.Qualifier
 
