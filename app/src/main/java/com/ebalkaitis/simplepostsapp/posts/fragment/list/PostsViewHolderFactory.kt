@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.ebalkaitis.simplepostsapp.R
 
-class ArticleViewHolderFactory(private val listener: PostClickListener) {
+class PostsViewHolderFactory(private val listener: PostClickListener) {
 
     fun create(parent: ViewGroup): PostsViewHolder {
         val inflater = LayoutInflater.from(parent.context)

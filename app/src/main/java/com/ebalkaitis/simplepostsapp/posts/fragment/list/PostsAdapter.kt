@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
 import javax.inject.Inject
 
-class PostsAdapter(private val factory: ArticleViewHolderFactory) : RecyclerView.Adapter<PostsViewHolder>() {
+class PostsAdapter(private val factory: PostsViewHolderFactory) : RecyclerView.Adapter<PostsViewHolder>() {
     private val articles = mutableListOf<Post>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
