@@ -2,6 +2,7 @@ package com.ebalkaitis.simplepostsapp.app
 
 import android.content.Context
 import com.ebalkaitis.simplepostsapp.utils.schedulers.Io
+import com.ebalkaitis.simplepostsapp.utils.schedulers.Main
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -16,14 +17,10 @@ abstract class AppModule {
 
     @Module
     companion object {
-        @JvmStatic
-        @Provides
-        @Io
+        @JvmStatic @Provides @Io
         fun provideIoScheduler(): Scheduler = Schedulers.io()
 
-        @JvmStatic
-        @Provides
-        @Io
+        @JvmStatic @Provides @Main
         fun provideMainScheduler(): Scheduler = AndroidSchedulers.mainThread()
     }
 }
