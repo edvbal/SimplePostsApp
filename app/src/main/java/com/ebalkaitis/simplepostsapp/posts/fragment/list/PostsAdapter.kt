@@ -2,8 +2,7 @@ package com.ebalkaitis.simplepostsapp.posts.fragment.list
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
-import javax.inject.Inject
+import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 
 class PostsAdapter(private val factory: PostsViewHolderFactory) : RecyclerView.Adapter<PostsViewHolder>() {
     private val posts = mutableListOf<Post>()

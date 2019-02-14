@@ -2,7 +2,7 @@ package com.ebalkaitis.simplepostsapp.posts.fragment.list
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
+import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import kotlinx.android.synthetic.main.item_post.view.*
 
 class PostsViewHolder(view: View, private val listener: PostClickListener) : RecyclerView.ViewHolder(view) {
