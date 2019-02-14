@@ -1,6 +1,7 @@
 package com.ebalkaitis.simplepostsapp.base
 
 import android.os.Bundle
+import android.support.annotation.LayoutRes
 import dagger.android.support.DaggerAppCompatActivity
 
 abstract class BaseDaggerActivity : DaggerAppCompatActivity() {
@@ -9,5 +10,6 @@ abstract class BaseDaggerActivity : DaggerAppCompatActivity() {
         setContentView(getLayoutId())
     }
 
+    @LayoutRes
     protected abstract fun getLayoutId(): Int
 }
