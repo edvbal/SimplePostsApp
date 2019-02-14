@@ -1,5 +1,6 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment
+package com.ebalkaitis.simplepostsapp.posts.fragment.mvp
 
+import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
 import com.ebalkaitis.simplepostsapp.utils.mvp.ViewPresenter
 import io.reactivex.Scheduler
 import timber.log.Timber

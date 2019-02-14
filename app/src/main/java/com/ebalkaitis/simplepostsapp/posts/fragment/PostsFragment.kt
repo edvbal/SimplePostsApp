@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerFragment
+import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
 import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
 import javax.inject.Inject
 

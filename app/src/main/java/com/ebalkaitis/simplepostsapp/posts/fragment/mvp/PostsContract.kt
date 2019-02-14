@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment
+package com.ebalkaitis.simplepostsapp.posts.fragment.mvp
 
 import com.ebalkaitis.simplepostsapp.utils.mvp.BasePresenter
 import com.ebalkaitis.simplepostsapp.utils.network.responses.Post

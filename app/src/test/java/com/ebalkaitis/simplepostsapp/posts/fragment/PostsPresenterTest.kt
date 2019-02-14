@@ -1,16 +1,15 @@
 package com.ebalkaitis.simplepostsapp.posts.fragment
 
+import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
+import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsPresenter
 import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
 import io.reactivex.Single
 import io.reactivex.schedulers.TestScheduler
 import org.junit.Before
 import org.junit.Test
-import org.mockito.BDDMockito
 import org.mockito.BDDMockito.*
 import org.mockito.Mock
-import org.mockito.Mockito
-import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 
 class PostsPresenterTest {

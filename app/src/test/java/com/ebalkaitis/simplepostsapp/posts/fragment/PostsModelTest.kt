@@ -1,9 +1,9 @@
 package com.ebalkaitis.simplepostsapp.posts.fragment
 
+import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsModel
 import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
 import io.reactivex.Single
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.BDDMockito.given
