@@ -1,7 +1,9 @@
 package com.ebalkaitis.simplepostsapp.utils.network
 
 import com.ebalkaitis.simplepostsapp.BuildConfig
+import com.ebalkaitis.simplepostsapp.utils.network.services.CommentsService
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
+import com.ebalkaitis.simplepostsapp.utils.network.services.UsersService
 import com.ebalkaitis.simplepostsapp.utils.schedulers.Io
 import dagger.Module
 import dagger.Provides
@@ -18,9 +20,7 @@ import javax.inject.Singleton
 abstract class NetworkModule {
     @Module
     companion object {
-        @JvmStatic
-        @Singleton
-        @Provides
+        @JvmStatic @Singleton @Provides
         fun createRetrofit(client: OkHttpClient, @Io scheduler: Scheduler): Retrofit {
             return Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)
@@ -30,16 +30,20 @@ abstract class NetworkModule {
                 .build()
         }
 
-        @JvmStatic
-        @Provides
+        @JvmStatic @Provides
         fun provideOkHttpClient(): OkHttpClient {
             return OkHttpClient.Builder()
                 .addInterceptor(HttpLoggingInterceptor().setLevel(BODY))
                 .build()
         }
 
-        @JvmStatic
-        @Provides
+        @JvmStatic @Provides
         fun providePostsService(retrofit: Retrofit): PostsService = retrofit.create(PostsService::class.java)
+
+        @JvmStatic @Provides
+        fun provideUsersService(retrofit: Retrofit): CommentsService = retrofit.create(CommentsService::class.java)
+
+        @JvmStatic @Provides
+        fun provideCommentsService(retrofit: Retrofit): UsersService = retrofit.create(UsersService::class.java)
     }
 }
