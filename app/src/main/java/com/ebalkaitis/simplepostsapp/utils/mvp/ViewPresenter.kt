@@ -1,6 +1,6 @@
 package com.ebalkaitis.simplepostsapp.utils.mvp
 
-open class ViewPresenter<T> : Presenter<T> {
+open class ViewPresenter<T> : BasePresenter<T> {
     private var view: T? = null
 
     override fun takeView(view: T) {
