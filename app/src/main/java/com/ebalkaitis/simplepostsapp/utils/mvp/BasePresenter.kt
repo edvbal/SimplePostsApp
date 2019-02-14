@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.base.mvp
+package com.ebalkaitis.simplepostsapp.utils.mvp
 
 open class BasePresenter<T> : Presenter<T> {
     private var view: T? = null

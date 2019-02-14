@@ -1,6 +1,6 @@
-package com.ebalkaitis.simplepostsapp.base.dagger
+package com.ebalkaitis.simplepostsapp.app
 
-import com.ebalkaitis.simplepostsapp.SimplePostsApplication
+import com.ebalkaitis.simplepostsapp.app.SimplePostsApplication
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule

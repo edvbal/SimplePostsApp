@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.base.mvp
+package com.ebalkaitis.simplepostsapp.utils.mvp
 
 interface Presenter<T> {
     fun takeView(view: T)
