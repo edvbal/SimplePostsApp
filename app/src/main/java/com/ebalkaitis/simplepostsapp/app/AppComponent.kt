@@ -1,6 +1,7 @@
 package com.ebalkaitis.simplepostsapp.app
 
 import com.ebalkaitis.simplepostsapp.app.SimplePostsApplication
+import com.ebalkaitis.simplepostsapp.utils.network.NetworkModule
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
@@ -10,6 +11,7 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
+        NetworkModule::class,
         AppModule::class
     ]
 )
