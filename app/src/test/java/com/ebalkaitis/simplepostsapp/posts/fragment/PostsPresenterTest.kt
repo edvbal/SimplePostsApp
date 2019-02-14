@@ -8,8 +8,10 @@ import io.reactivex.Single
 import io.reactivex.schedulers.TestScheduler
 import org.junit.Before
 import org.junit.Test
+import org.mockito.ArgumentMatchers
 import org.mockito.BDDMockito.*
 import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 
 class PostsPresenterTest {
@@ -31,6 +33,13 @@ class PostsPresenterTest {
     }
 
     @Test
+    fun onCreated_setsRecyclerView() {
+        presenter.onCreated()
+
+        verify(view).setRecyclerView()
+    }
+
+    @Test
     fun onCreated_whenPostsFetchSucceeds_populatesPosts() {
         val posts = listOf(Post(1, 1, "", ""))
         given(model.fetchPosts()).willReturn(Single.just(posts))
@@ -42,13 +51,12 @@ class PostsPresenterTest {
     }
 
     @Test
-    fun onCreated_whenPostsFetchFails_doesNotCallView() {
-        val posts = listOf(Post(1, 1, "", ""))
-        given(model.fetchPosts()).willReturn(Single.just(posts))
+    fun onCreated_whenPostsFetchFails_doesNotPopulatePosts() {
+        given(model.fetchPosts()).willReturn(Single.error(Throwable()))
 
         presenter.onCreated()
         testScheduler.triggerActions()
 
-        verifyZeroInteractions(view)
+        verify(view, never()).populatePosts(com.nhaarman.mockito_kotlin.any())
     }
 }

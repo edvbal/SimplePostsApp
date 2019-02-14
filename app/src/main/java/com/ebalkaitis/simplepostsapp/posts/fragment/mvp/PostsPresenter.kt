@@ -11,6 +11,7 @@ class PostsPresenter(
 ) : PostsContract.Presenter,
     ViewPresenter<PostsContract.View>() {
     override fun onCreated() {
+        onView { setRecyclerView() }
         launchJob {
             model.fetchPosts()
                 .observeOn(scheduler)

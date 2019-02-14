@@ -11,6 +11,7 @@ interface PostsContract {
 
     interface View {
         fun populatePosts(posts: List<Post>)
+        fun setRecyclerView()
     }
 
     interface Presenter : BasePresenter<View> {
