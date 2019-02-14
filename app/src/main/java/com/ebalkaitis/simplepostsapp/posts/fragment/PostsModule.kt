@@ -7,6 +7,7 @@ import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
 import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsModel
 import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsPresenter
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
+import com.ebalkaitis.simplepostsapp.utils.network.services.UsersService
 import com.ebalkaitis.simplepostsapp.utils.schedulers.Main
 import com.ebalkaitis.simplepostsapp.utils.scopes.FragmentScope
 import dagger.Binds
@@ -28,17 +29,17 @@ abstract class PostsModule {
         ): PostsContract.Presenter = PostsPresenter(model, scheduler)
 
         @FragmentScope @JvmStatic @Provides
-        fun provideModel(postsService: PostsService): PostsContract.Model =
-            PostsModel(postsService)
+        fun provideModel(
+            postsService: PostsService,
+            usersService: UsersService
+        ): PostsContract.Model = PostsModel(postsService, usersService)
 
         @JvmStatic @Provides
-        fun provideViewHolderFactory(listener: PostClickListener): PostsViewHolderFactory {
-            return PostsViewHolderFactory(listener)
-        }
+        fun provideViewHolderFactory(
+            listener: PostClickListener
+        ): PostsViewHolderFactory = PostsViewHolderFactory(listener)
 
         @JvmStatic @Provides
-        fun provideAdapter(factory: PostsViewHolderFactory): PostsAdapter {
-            return PostsAdapter(factory)
-        }
+        fun provideAdapter(factory: PostsViewHolderFactory): PostsAdapter = PostsAdapter(factory)
     }
 }
