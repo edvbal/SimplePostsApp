@@ -1,7 +1,7 @@
 package com.ebalkaitis.simplepostsapp.posts.fragment
 
 import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsModel
-import com.ebalkaitis.simplepostsapp.utils.network.responses.Post
+import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
 import io.reactivex.Single
 import org.junit.Before
