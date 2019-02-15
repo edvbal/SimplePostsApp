@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment.list
+package com.ebalkaitis.simplepostsapp.posts.fragment.recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

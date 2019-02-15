@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment.list
+package com.ebalkaitis.simplepostsapp.posts.fragment.recycler
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

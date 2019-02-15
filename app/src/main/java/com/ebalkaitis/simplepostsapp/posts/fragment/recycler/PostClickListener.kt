@@ -1,4 +1,4 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment.list
+package com.ebalkaitis.simplepostsapp.posts.fragment.recycler
 
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 
