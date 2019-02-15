@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.View
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerFragment
+import com.ebalkaitis.simplepostsapp.post.details.PostDetailsActivity
 import com.ebalkaitis.simplepostsapp.post.list.mvp.PostsContract
 import com.ebalkaitis.simplepostsapp.post.list.recycler.PostClickListener
 import com.ebalkaitis.simplepostsapp.post.list.recycler.PostsAdapter
+import com.ebalkaitis.simplepostsapp.utils.entities.PostDetails
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import kotlinx.android.synthetic.main.fragment_posts.*
 import javax.inject.Inject
@@ -35,7 +37,11 @@ class PostsFragment : BaseDaggerFragment(), PostsContract.View,
         presenter.onPostClicked(post)
     }
 
-    override fun setRecyclerView() {
+    override fun showDetailsScreen(postDetails: PostDetails) {
+        PostDetailsActivity.start(context, postDetails)
+    }
+
+    override fun setListView() {
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
     }

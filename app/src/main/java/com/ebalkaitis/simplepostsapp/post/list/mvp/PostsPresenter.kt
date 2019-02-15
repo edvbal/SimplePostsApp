@@ -11,7 +11,7 @@ class PostsPresenter(
 ) : PostsContract.Presenter,
     ViewPresenter<PostsContract.View>() {
     override fun onCreated() {
-        onView { setRecyclerView() }
+        onView { setListView() }
         launchJob {
             model.fetchComments()
                 .flatMap { comments ->
@@ -31,6 +31,6 @@ class PostsPresenter(
     }
 
     override fun onPostClicked(post: Post) {
-        model.getPostDetails(post)
+        onView { showDetailsScreen(model.getPostDetails(post)) }
     }
 }
