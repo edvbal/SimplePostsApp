@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".post.details.PostDetailsActivity"/>
+        <activity
+                android:name=".post.details.PostDetailsActivity"
+                android:parentActivityName=".post.list.PostsActivity"/>
     </application>
 
 </manifest>
