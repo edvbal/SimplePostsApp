@@ -1,7 +1,7 @@
-package com.ebalkaitis.simplepostsapp.post.fragment
+package com.ebalkaitis.simplepostsapp.post.list.fragment
 
-import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsContract
-import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsPresenter
+import com.ebalkaitis.simplepostsapp.post.list.mvp.PostsContract
+import com.ebalkaitis.simplepostsapp.post.list.mvp.PostsPresenter
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Comment
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import com.ebalkaitis.simplepostsapp.utils.network.entities.User

@@ -1,6 +1,6 @@
-package com.ebalkaitis.simplepostsapp.post.fragment
+package com.ebalkaitis.simplepostsapp.post.list.fragment
 
-import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsModel
+import com.ebalkaitis.simplepostsapp.post.list.mvp.PostsModel
 import com.ebalkaitis.simplepostsapp.utils.entities.PostDetails
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Comment
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
@@ -34,7 +34,7 @@ class PostsModelTest {
 
     @Test
     fun fetchPosts_callsServiceToFetchPosts() {
-        val posts = listOf(Post(1, 1, "", ""))
+        val posts = listOf(Post(USER_ID_ONE, POST_ID_ONE, "", ""))
         given(postsService.getPosts()).willReturn(Single.just(posts))
 
         model.fetchPosts().test()
@@ -138,7 +138,6 @@ class PostsModelTest {
         private const val TITLE = "TITLE"
         private const val BODY = "BODY"
         private const val USERNAME = "USERNAME"
-        private const val NUMBER_OF_COMMENTS = 0
         private const val USER_ID_ONE = 1
         private const val USER_ID_TWO = 2
         private const val POST_ID_ONE = 1

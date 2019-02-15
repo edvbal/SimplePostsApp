@@ -1,7 +1,7 @@
-package com.ebalkaitis.simplepostsapp.post
+package com.ebalkaitis.simplepostsapp.post.list
 
-import com.ebalkaitis.simplepostsapp.post.fragment.PostsFragment
-import com.ebalkaitis.simplepostsapp.post.fragment.PostsModule
+import com.ebalkaitis.simplepostsapp.post.list.fragment.PostsFragment
+import com.ebalkaitis.simplepostsapp.post.list.fragment.PostsModule
 import com.ebalkaitis.simplepostsapp.utils.scopes.FragmentScope
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

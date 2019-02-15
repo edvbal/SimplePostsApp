@@ -1,17 +1,18 @@
-package com.ebalkaitis.simplepostsapp.post.fragment
+package com.ebalkaitis.simplepostsapp.post.list.fragment
 
 import android.os.Bundle
 import android.view.View
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerFragment
-import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsContract
-import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostClickListener
-import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostsAdapter
+import com.ebalkaitis.simplepostsapp.post.list.mvp.PostsContract
+import com.ebalkaitis.simplepostsapp.post.list.recycler.PostClickListener
+import com.ebalkaitis.simplepostsapp.post.list.recycler.PostsAdapter
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import kotlinx.android.synthetic.main.fragment_posts.*
 import javax.inject.Inject
 
-class PostsFragment : BaseDaggerFragment(), PostsContract.View, PostClickListener {
+class PostsFragment : BaseDaggerFragment(), PostsContract.View,
+    PostClickListener {
     @Inject
     lateinit var presenter: PostsContract.Presenter
 
