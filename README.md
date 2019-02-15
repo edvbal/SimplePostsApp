@@ -5,4 +5,4 @@ Architecture: MVP
 
 Language: Kotlin
 
-I have focused on architecture side and unit testing because I think that they are essential for every app. Transitions and other UI tweaks could be done with more time. 
+I have focused on architecture side and unit testing because I think that they are essential for every app. Transitions and other UI tweaks could be done with more time in hand. 
