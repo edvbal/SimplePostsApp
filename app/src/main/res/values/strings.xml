@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimplePostsApp</string>
+    <string name="postDetailsUsernameLabel">Username: %s</string>
+    <string name="postDetailsNumberOfCommentsLabel">Number of comments: %d</string>
 </resources>
