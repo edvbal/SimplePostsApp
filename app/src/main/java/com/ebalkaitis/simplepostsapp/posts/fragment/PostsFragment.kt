@@ -31,6 +31,7 @@ class PostsFragment : BaseDaggerFragment(), PostsContract.View, PostClickListene
     }
 
     override fun onPostClicked(post: Post) {
+        presenter.onPostClicked(post)
     }
 
     override fun setRecyclerView() {

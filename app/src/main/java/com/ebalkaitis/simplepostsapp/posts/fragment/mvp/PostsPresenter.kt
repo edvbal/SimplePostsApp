@@ -1,7 +1,7 @@
 package com.ebalkaitis.simplepostsapp.posts.fragment.mvp
 
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
 import com.ebalkaitis.simplepostsapp.utils.mvp.ViewPresenter
+import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import io.reactivex.Scheduler
 import timber.log.Timber
 
@@ -24,8 +24,13 @@ class PostsPresenter(
                 }
                 .observeOn(scheduler)
                 .subscribe({ posts ->
+                    model.savePosts(posts)
                     onView { populatePosts(posts) }
                 }, Timber::e)
         }
+    }
+
+    override fun onPostClicked(post: Post) {
+        model.getPostDetails(post)
     }
 }
