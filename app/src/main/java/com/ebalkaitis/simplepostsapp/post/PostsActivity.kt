@@ -1,9 +1,9 @@
-package com.ebalkaitis.simplepostsapp.posts
+package com.ebalkaitis.simplepostsapp.post
 
 import android.os.Bundle
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerActivity
-import com.ebalkaitis.simplepostsapp.posts.fragment.PostsFragment
+import com.ebalkaitis.simplepostsapp.post.fragment.PostsFragment
 import com.ebalkaitis.simplepostsapp.utils.extensions.replaceFragment
 import kotlinx.android.synthetic.main.layout_toolbar.*
 

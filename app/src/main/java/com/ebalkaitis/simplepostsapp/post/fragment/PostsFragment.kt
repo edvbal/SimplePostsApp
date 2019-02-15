@@ -1,12 +1,12 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment
+package com.ebalkaitis.simplepostsapp.post.fragment
 
 import android.os.Bundle
 import android.view.View
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerFragment
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
-import com.ebalkaitis.simplepostsapp.posts.fragment.recycler.PostClickListener
-import com.ebalkaitis.simplepostsapp.posts.fragment.recycler.PostsAdapter
+import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsContract
+import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostClickListener
+import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostsAdapter
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
 import kotlinx.android.synthetic.main.fragment_posts.*
 import javax.inject.Inject

@@ -1,11 +1,11 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment
+package com.ebalkaitis.simplepostsapp.post.fragment
 
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsContract
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsModel
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsPresenter
-import com.ebalkaitis.simplepostsapp.posts.fragment.recycler.PostClickListener
-import com.ebalkaitis.simplepostsapp.posts.fragment.recycler.PostsAdapter
-import com.ebalkaitis.simplepostsapp.posts.fragment.recycler.PostsViewHolderFactory
+import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsContract
+import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsModel
+import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsPresenter
+import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostClickListener
+import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostsAdapter
+import com.ebalkaitis.simplepostsapp.post.fragment.recycler.PostsViewHolderFactory
 import com.ebalkaitis.simplepostsapp.utils.network.services.CommentsService
 import com.ebalkaitis.simplepostsapp.utils.network.services.PostsService
 import com.ebalkaitis.simplepostsapp.utils.network.services.UsersService

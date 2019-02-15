@@ -1,6 +1,6 @@
-package com.ebalkaitis.simplepostsapp.posts.fragment
+package com.ebalkaitis.simplepostsapp.post.fragment
 
-import com.ebalkaitis.simplepostsapp.posts.fragment.mvp.PostsModel
+import com.ebalkaitis.simplepostsapp.post.fragment.mvp.PostsModel
 import com.ebalkaitis.simplepostsapp.utils.entities.PostDetails
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Comment
 import com.ebalkaitis.simplepostsapp.utils.network.entities.Post
