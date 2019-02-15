@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import com.ebalkaitis.simplepostsapp.R
 import com.ebalkaitis.simplepostsapp.base.BaseDaggerActivity
+import com.ebalkaitis.simplepostsapp.post.details.fragment.PostDetailsFragment
 import com.ebalkaitis.simplepostsapp.utils.entities.PostDetails
+import com.ebalkaitis.simplepostsapp.utils.extensions.replaceFragment
 import kotlinx.android.synthetic.main.layout_toolbar.*
 
 class PostDetailsActivity : BaseDaggerActivity() {
@@ -16,7 +18,12 @@ class PostDetailsActivity : BaseDaggerActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (savedInstanceState == null) {
+            replaceFragment(PostDetailsFragment.newInstance(getPostDetails()))
         }
+    }
+
+    private fun getPostDetails(): PostDetails {
+        return intent.extras!!.getParcelable(POST_DETAILS_KEY)!!
     }
 
     companion object {
@@ -27,7 +34,7 @@ class PostDetailsActivity : BaseDaggerActivity() {
         }
 
         private fun createIntent(context: Context?, postDetails: PostDetails): Intent {
-            val intent = Intent(context, PostDetailsActivity::class.java)
+            val intent = Intent(context, PostDetailsActivity::class.java).apply { }
             intent.putExtra(POST_DETAILS_KEY, postDetails)
             return intent
         }
